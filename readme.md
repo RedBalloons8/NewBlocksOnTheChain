@@ -34,6 +34,14 @@ on windows:
 venv\Scripts\activate.bat
 ```
 
+Also, we keep dependencies listed in a [requirements](requirements.txt) file.
+The python package manager - pip - can be used to read and install them like
+this:
+
+```sh
+pip install -r requirements.txt
+```
+
 ## Running
 
 To run the project one has to execute the main script
