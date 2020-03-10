@@ -1,3 +1,6 @@
+# Editor specific
+.vscode/
+
 # Cryptographic material and database
 *.pem
 sqlite/
