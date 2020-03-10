@@ -49,3 +49,7 @@ To run the project one has to execute the main script
 ```sh
 python3 main.py
 ```
+
+## License
+
+This project is licensed under the text in the [license file](license.txt).

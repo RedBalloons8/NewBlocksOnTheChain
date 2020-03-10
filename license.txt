@@ -1,0 +1,3 @@
+Copyright (c) Atos Nederland and <insert name here>
+
+All rights reserved.
