@@ -12,7 +12,8 @@ class MyCommunity(Community):
 
     def started(self):
         async def print_peers():
-            print("I am:", self.my_peer, "\nI know:", [str(p) for p in self.get_peers()])
+            print("I am:", self.my_peer, "\nI know:",
+                  [str(p) for p in self.get_peers()])
         # We register a asyncio task with this overlay.
         # This makes sure that the task ends when this overlay is unloaded.
         # We call the 'print_peers' function every 5.0 seconds, starting now.
@@ -23,10 +24,10 @@ async def start_communities():
     for i in [1, 2]:
         configuration = get_default_configuration()
         configuration['keys'] = [{
-                    'alias': "my peer",
-                    'generation': u"medium",
-                    'file': u"ec%d.pem" % i
-                }]
+            'alias': "my peer",
+            'generation': u"medium",
+            'file': u"ec%d.pem" % i
+        }]
         # We provide the 'started' function to the 'on_start'.
         # We will call the overlay's 'started' function without any
         # arguments once IPv8 is initialized.
@@ -34,12 +35,12 @@ async def start_communities():
             'class': 'MyCommunity',
             'key': "my peer",
             'walkers': [{
-                            'strategy': "RandomWalk",
+                'strategy': "RandomWalk",
                             'peers': 10,
                             'init': {
                                 'timeout': 3.0
                             }
-                        }],
+            }],
             'initialize': {},
             'on_start': [('started', )]
         }]
